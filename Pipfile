@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+nose = "*"
+pynt = "*"
+pynt-contrib = "*"
+semantic-version = "*"
+bumpversion = "*"
+checksumdir = "*"
+prospector = "*"
+mypy = "*"
+
+[packages]
+
+[requires]
+python_version = "3.6"
