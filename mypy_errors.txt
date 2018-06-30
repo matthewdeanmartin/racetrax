@@ -1,0 +1,45 @@
+racetrax/bet_class.py:7: error: Function is missing a type annotation
+racetrax/ticket_utils.py:14: error: Function is missing a type annotation
+racetrax/ticket_utils.py:23: error: Function is missing a type annotation
+racetrax/ticket_utils.py:39: error: Function is missing a type annotation
+racetrax/ticket_utils.py:57: error: Function is missing a type annotation
+racetrax/ticket_utils.py:88: error: Function is missing a type annotation
+racetrax/ticket_utils.py:121: error: Function is missing a type annotation
+racetrax/ticket_utils.py:140: error: Function is missing a type annotation
+racetrax/ticket_utils.py:150: error: Function is missing a type annotation
+racetrax/ticket_utils.py:154: error: Function is missing a type annotation
+racetrax/payoffs.py:14: error: Function is missing a type annotation
+racetrax/payoffs.py:15: error: Need type annotation for 'charts'
+racetrax/payoffs.py:26: error: Function is missing a type annotation
+racetrax/payoffs.py:37: error: Function is missing a type annotation
+racetrax/payoffs.py:48: error: Function is missing a type annotation
+racetrax/payoffs.py:65: error: Function is missing a type annotation
+racetrax/payoffs.py:86: error: Function is missing a type annotation
+racetrax/payoffs.py:103: error: Function is missing a type annotation
+racetrax/payoffs.py:121: error: Function is missing a type annotation
+racetrax/payoffs.py:122: error: Call to untyped function "PayoutTables" in typed context
+racetrax/payoffs.py:125: error: Call to untyped function "go" in typed context
+racetrax/number_machine.py:9: error: Function is missing a type annotation
+racetrax/number_machine.py:26: error: Need type annotation for 'cumulative_probability'
+racetrax/number_machine.py:35: error: Function is missing a type annotation
+racetrax/number_machine.py:42: error: Function is missing a type annotation
+racetrax/number_machine.py:43: error: Need type annotation for 'places'
+racetrax/number_machine.py:78: error: Function is missing a type annotation
+racetrax/number_machine.py:88: error: Call to untyped function "ProbabilityMachine" in typed context
+racetrax/ticket_util_tests.py:9: error: Function is missing a type annotation
+racetrax/ticket_util_tests.py:14: error: Call to untyped function "Ticket" in typed context
+racetrax/ticket_util_tests.py:20: error: Function is missing a type annotation
+racetrax/ticket_util_tests.py:25: error: Call to untyped function "Ticket" in typed context
+racetrax/number_machine_test.py:6: error: Function is missing a type annotation
+racetrax/number_machine_test.py:11: error: Call to untyped function "ProbabilityMachine" in typed context
+racetrax/number_machine_test.py:16: error: Function is missing a type annotation
+racetrax/number_machine_test.py:21: error: Call to untyped function "ProbabilityMachine" in typed context
+racetrax/number_machine_test.py:45: error: Incompatible types in assignment (expression has type "str", target has type "int")
+racetrax/game_class.py:12: error: Function is missing a type annotation
+racetrax/game_class.py:22: error: Function is missing a type annotation
+racetrax/game_class.py:25: error: Function is missing a type annotation
+racetrax/game_class.py:36: error: Function is missing a type annotation
+racetrax/game_class.py:37: error: Need type annotation for 'outcome'
+racetrax/game_class.py:39: error: Function is missing a type annotation
+racetrax/game_class.py:40: error: Call to untyped function "ProbabilityMachine" in typed context
+racetrax/game_class.py:43: error: Function is missing a type annotation

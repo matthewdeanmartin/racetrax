@@ -183,19 +183,16 @@ def lint():
               .split(" ")))
 
     command = "pylint --rcfile=pylintrc.ini {0}".format(PROJECT_NAME)
-    nose_process = subprocess.Popen(command.split(" "),
+    bash_process = subprocess.Popen(command.split(" "),
                                     #shell=True,
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE
                                     )
-    out, err = nose_process.communicate()  # wait
+    out, err = bash_process.communicate()  # wait
     print("----")
-    #print(out)
-    # lint_text = nose_process.stdout.read()
+
     with open("lint.txt", "w+") as lint_file:
         lint_file.write(out.decode())
-    # if nose_process.returncode != 0:
-    #     raise TypeError("Recode is {0}".format(nose_process.returncode))
 
     num_lines = sum(1 for line in open('lint.txt'))
     if num_lines > 100:
@@ -239,6 +236,25 @@ def package():
     execute("pandoc", *("--from=markdown --to=rst --output=README.rst README.md".split(" ")))
     execute(PYTHON, "setup.py", "sdist", "--formats=gztar,zip")
 
+@task()
+@skip_if_no_change("type_checking")
+def type_checking():
+
+    command = "mypy {0} --ignore-missing-imports --strict".format(PROJECT_NAME)
+    bash_process = subprocess.Popen(command.split(" "),
+                                    #shell=True,
+                                    stdout=subprocess.PIPE,
+                                    stderr=subprocess.PIPE
+                                    )
+    out, err = bash_process.communicate()  # wait
+    print("----")
+
+    with open("mypy_errors.txt", "w+") as lint_file:
+        lint_file.write(out.decode())
+
+    num_lines = sum(1 for line in open('mypy_errors.txt'))
+    if num_lines > 10:
+        raise TypeError("Too many lines of mypy : {0}".format(num_lines))
 
 @task()
 def echo(*args, **kwargs):
